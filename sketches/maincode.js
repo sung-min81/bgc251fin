@@ -41,9 +41,10 @@ let stickerShapes = [
   '<>',
   '{}',
   'https',
-  'grapic',
-  'design',
-  '#401',
+  'roop',
+  'Not',
+  'Found',
+  '#404',
   'ERROR',
   '!--',
 ];
