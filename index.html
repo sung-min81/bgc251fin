@@ -1,0 +1,155 @@
+  <!DOCTYPE html>
+  <html lang="ko">
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+      <!-- ∨×××× [수정 금지] ××××∨ -->
+      <title></title>
+      <!-- ∧×××× [수정 금지] ××××∧ -->
+
+      <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+        rel="stylesheet"
+      />
+      <link
+        rel="stylesheet"
+        as="style"
+        crossorigin
+        href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css"
+      />
+      <link rel="stylesheet" href="./common/p5template/p5template.css" />
+
+      <script src="./common/p5template/responsive.js"></script>
+      <script src="./common/p5template/scroll.js"></script>
+      <script src="./common/p5template/title.js"></script>
+      <script src="./common/p5template/references.js"></script>
+      <script src="./common/p5template/paging.js"></script>
+      <script>
+        new P5Template.Scroll();
+
+        // ∨○○○○ [수정 필수] ○○○○∨
+        // 작품 제목, 본인 성명, 작품 공개 연도
+        new P5Template.Title('코토이즘', '양성민', '2025');
+        // 참고자료 목록
+        const references = [
+          {
+            title: 'p5.js Coding Tutorial | Drawing with Webcam (createCapture function)',
+            authors: ['Patt Vira'],
+            year: '2024',
+            publisher: 'Patt Vira - YouTube',
+            url: 'https://www.youtube.com/watch?v=hHZcIMppkFc',
+          },
+                  {
+            title: 'p5.js Coding Tutorial | Bubbly Emoji Effect',
+            authors: ['Patt Vira'],
+            year: '2024',
+            publisher: 'Patt Vira - YouTube',
+            url: 'https://www.youtube.com/watch?v=Rd1eeHEx_fM',
+          },
+          
+        ];
+        // ∧○○○○ [수정 필수] ○○○○∧
+
+        new P5Template.References(references);
+        new P5Template.Paging();
+      </script>
+
+      <!-- ∨○○○○ [수정 필수] ○○○○∨ -->
+      <!-- p5.js 라이브러리 로딩 -->
+      <script src="https://cdn.jsdelivr.net/npm/p5@1.11.8/lib/p5.js"></script>
+      <!-- 본인 스케치 로딩 -->
+      <script src="./sketches/maincode.js" defer></script>
+      <!-- ∧○○○○ [수정 필수] ○○○○∧ -->
+    </head>
+    <body>
+      <main id="main">
+        <!-- ∨○○○○ [수정 필수] ○○○○∨ -->
+        <!-- 전체화면 여부 선택 -->
+        <section
+          id="section-canvas"
+          class="section section--canvas canvas"
+          data-full-width="true"
+        >
+          <!-- ∧○○○○ [수정 필수] ○○○○∧ -->
+          <div class="container canvas__container">
+            <div id="canvas-container"></div>
+          </div>
+        </section>
+        <section id="section-control" class="section section--control control">
+          <div class="container control__container control__container">
+            <div class="control__label">
+              <div class="control__label__title title"></div>
+              <div class="control__label__author author"></div>
+            </div>
+            <div class="control__paging">
+              <button
+                id="button-prev"
+                class="icon-button control__button control__button--prev"
+                data-icon="arrow_back_ios_new"
+                aria-label="to previous"
+              ></button>
+              <button
+                id="button-next"
+                class="icon-button control__button control__button--next"
+                data-icon="arrow_forward_ios"
+                aria-label="to next"
+              ></button>
+              <button
+                id="button-list"
+                class="icon-button control__button control__button--list"
+                data-icon="grid_view"
+                aria-label="to list"
+              ></button>
+            </div>
+            <div class="control__scroll">
+              <button
+                id="button-scroll"
+                class="icon-button control__button control__button--scroll"
+                data-icon="arrow_drop_down"
+                aria-label="toggle description"
+                data-toward="down"
+              ></button>
+            </div>
+          </div>
+        </section>
+        <section
+          id="section-information"
+          class="section section--information information"
+        >
+          <div class="container information__container">
+            <div class="information__label">
+              <h1 class="information__label__title title"></h1>
+              <h2 class="information__label__author author"></h2>
+            </div>
+            <div class="information__description">
+              <!-- ∨○○○○ [수정 필수] ○○○○∨ -->
+              <!-- 작품 설명 -->
+              <p>
+                코토이즘(KOTOISM)은 웹캠 이미지를 코딩적 언어와 디자인적 감각으로
+                해체·재조합하는 인터랙티브 미디어 작업입니다. 사용자는 카메라 앞
+                자신의 모습을 픽셀화, 드로잉, 파티클, 그리고 다양한 코딩 관련
+                스티커로 자유롭게 꾸밀 수 있습니다. 각 효과는 키보드와 마우스
+                조작을 통해 즉각적으로 전환·혼합되며, 기술적 표현과 창의적 개입이
+                만나는 과정을 직접 경험할 수 있습니다.
+                <p> 내 모습”이라는 현실 데이터를 픽셀, 코드, 그래픽 텍스트 등 디지털 요소로 변환·재해석하는 실험입니다. 아날로그 드로잉 감각과 컴퓨터 알고리즘, 그리고 프로그래밍 언어가 만나는 접점에 “새로운 나”, 나만의 디지털 자화상을 만들어낼 수 있습니다. 코토이즘은 디자이너로서 현실/가상, 수동/자동, 디자인/코딩의 경계를 넘나드는 창작의 자유와 자기표현의 가능성을 탐구합니다.</p>
+                <P> 1, 2, 3, 4, 5: 모드 변경
+
+  R: reset (모든 효과 지우기)
+
+  C: 캡처 (현재 화면 저장)</P>
+                <!-- ∧○○○○ [수정 필수] ○○○○∧ -->
+              </p>
+            </div>
+
+            <div class="information__reference">
+              <div class="information__reference__wrap">
+                <div class="information__reference__title">참고자료</div>
+                <ol></ol>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </body>
+  </html>
